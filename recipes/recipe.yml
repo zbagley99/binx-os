@@ -26,12 +26,17 @@ modules:
         - fd-find
         - lazygit
         - tmux
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
 
   - type: default-flatpaks
     configurations:
       - notify: true
         scope: system
         install:
+          - org.mozilla.firefox
           - dev.zed.Zed
           - com.github.tchx84.Flatseal
       - scope: user
